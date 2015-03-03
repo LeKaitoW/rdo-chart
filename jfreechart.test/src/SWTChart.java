@@ -1,5 +1,3 @@
-
-
 import org.apache.commons.lang3.time.StopWatch;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FillLayout;
@@ -18,12 +16,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.experimental.chart.swt.ChartComposite;
 
-/**
- * An example of a time series chart.  For the most part, default settings are 
- * used, except that the renderer is modified to show filled shapes (as well as 
- * lines) at each data point.
- */
-public class ChartTest
+public class SWTChart
 {
 
     private static JFreeChart createChart(XYDataset dataset) {
@@ -53,8 +46,8 @@ public class ChartTest
 		plot.setDomainAxis(DomainAxis);
 
 		final MyRender renderer = new MyRender();
-		 // final XYStepRenderer renderer = new XYStepRenderer();
-		//final SamplingXYLineRenderer renderer = new SamplingXYLineRenderer();
+//		final XYStepRenderer renderer = new XYStepRenderer();
+//		final SamplingXYLineRenderer renderer = new SamplingXYLineRenderer();
 		plot.setRenderer(0, renderer);
 
 		return chart;
@@ -69,7 +62,7 @@ public class ChartTest
 		dataset1.addSeries(series1);
 		
         Double next = 0.0;
-        int num = 2000000;
+        int num = 1000000;
         int maxX = 496;
         int minX = 497;
 		
